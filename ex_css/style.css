@@ -1,0 +1,12 @@
+:in-range{
+    background-color: greenyellow;
+}
+
+:out-of-range{
+    background-color: red;
+}
+
+input{
+    width: 200px;
+    border-radius: 10px;
+}
