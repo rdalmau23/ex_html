@@ -57,6 +57,8 @@ body {
   height: 300px;
   background-color: red;
   z-index: 1;
+  animation: changeColor 1s infinite;
+  -webkit-animation: changeColor 1s infinite;
 }
 .circle2 {
   width: 240px;
@@ -65,6 +67,8 @@ body {
   z-index: 2;
   top: 30px;
   left: 30px;
+  animation: changeColor2 2s infinite;
+  -webkit-animation: changeColor2 2s infinite;
 }
 .circle3 {
   width: 180px;
@@ -73,6 +77,8 @@ body {
   z-index: 3;
   top: 60px;
   left: 60px;
+  animation: changeColor 3s infinite;
+  -webkit-animation: changeColor 3s infinite;
 }
 .circle4 {
   width: 120px;
@@ -81,6 +87,8 @@ body {
   z-index: 4;
   top: 90px;
   left: 90px;
+  animation: changeColor2 4s infinite;
+  -webkit-animation: changeColor2 4s infinite;
 }
 .circle5 {
   width: 60px;
@@ -89,6 +97,8 @@ body {
   z-index: 5;
   top: 120px;
   left: 120px;
+  animation: changeColor 5s infinite;
+  -webkit-animation: changeColor 5s infinite;
 }
 .circle6 {
   width: 350px;
@@ -97,6 +107,8 @@ body {
   z-index: 0;
   top: -25px;
   left: -25px;
+  animation: changeColor2 6s infinite;
+  -webkit-animation: changeColor2 6s infinite;
 }
 
 .circle:hover {
@@ -119,4 +131,14 @@ body {
   top: 150px;
   left: -25px;
   z-index: 9;
+}
+@keyframes changeColor {
+    0% { background-color: red; }
+    50% { background-color: yellow; }
+    100% { background-color: red; }
+}
+@keyframes changeColor2 {
+    0% { background-color: yellow; }
+    50% { background-color: red; }
+    100% { background-color: yellow; }
 }
