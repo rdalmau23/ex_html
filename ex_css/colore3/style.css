@@ -43,19 +43,19 @@
 }
 @media (min-width: 768px) and (max-width: 1024px) {
     .primero{
-        width: 49.7%;
+        width: 49.4%;
         float: left;
-        margin-right: 2px;
+        margin: 2px;
     }
     .cuarto{
-        width: 24.5%;
+        width: 24.4%;
         float: right;
-        margin-inline-end: 2px;
+        margin: 2px;
     }
     .tercero{
-        width: 33%;
+        width: 32.8%;
         float: right;
-        margin-right: 2px;
+        margin: 2px;
     }
     
 }
