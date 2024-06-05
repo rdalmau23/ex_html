@@ -1,0 +1,46 @@
+.primero{
+    background-color: orange;
+}
+.segundo{
+    background-color: yellowgreen;
+}
+.tercero{
+    background-color: blue;
+}
+.cuarto{
+    background-color: grey;
+}
+
+.fila{
+    margin-bottom: 10px;
+}
+.fila.primero{
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.fila.segundo{
+    margin-bottom: 20px;
+    height: 90px;
+}
+.fila.tercero{
+    margin-bottom: 20px;
+    height: 60px;
+}
+.fila.cuarto{
+    height: 30px;
+}
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .cuarto{
+        width: 50%;
+        
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cuarto{
+        width: 25%%;
+        
+    }
+}
