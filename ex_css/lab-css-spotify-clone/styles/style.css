@@ -1,0 +1,76 @@
+/*
+Colors:
+
+Text: 1A1A1A
+Green: #00B172
+White: #FFF
+
+*/
+body{
+    margin: 0px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    height: 60px;
+    display: block;
+    text-align: center;
+    margin: auto;
+
+}
+.menu{
+    text-decoration: none;
+    margin: 0px 10px;
+    color: black;
+    display: block;
+    margin: 10px;
+}
+
+#hero{
+    background-image: url("../images/landing.jpg");
+    height: 330px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#container{
+    display:block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+@media(width <= 320px){
+    header{
+
+    }
+    .menu{
+        display: block;
+        margin: 10px;
+    }
+}
+
+@media(320px < width < 720px){
+    header{
+        display: block;
+    }
+    nav{
+        text-align: center;
+        display: block;
+    }
+    #logo{
+        display: block;
+
+    }
+   
+}
+
+@media(720px < width < 1024px){
+    
+}
