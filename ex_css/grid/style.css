@@ -1,0 +1,226 @@
+header{
+    background-color: black;
+    height: 50px;
+    margin: 0px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+menu{
+    background-color: #f44336;
+    height: 50px;
+    margin: 0px;
+    color: white;
+    text-align: center;
+}
+section{
+    background-color: #6fa3ef;
+    height: 150px;
+    color: white;
+    text-align: center;
+}
+main{
+    background-color:  #1a2b3c;
+    height: 150px;
+    color: white;
+    text-align: center;
+}
+#div1{
+    background-color: #ffd700;
+    height: 50px; 
+    color: white;
+    text-align: center;
+}
+#div2{
+    background-color: #32a852;
+    height: 50px; 
+    color: white;
+    text-align: center;
+}
+#div3{
+    background-color:  #b0c4de;
+    height: 50px; 
+    color: white;
+    text-align: center;
+}
+
+@media( 420px < width < 768px){
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    height: 100vh;       
+}
+    
+header {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+section {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    background-color: #6fa3ef;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+menu {
+    grid-column: 1;
+    grid-row: 3 / 6;
+    background-color: #f44336;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+main {
+    grid-column: 2/ 7;
+    grid-row: 3 ;
+    background-color: #1a2b3c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#div1 {
+    grid-column: 2 / 7;
+    grid-row: 4;
+    background-color: #ffd700;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#div2 {
+    grid-column: 2;
+    grid-row: 5;
+    background-color: #32a852;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#div3 {
+    grid-column: 3;
+    grid-row: 5;
+    background-color: #b0c4de;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+}
+
+
+@media( 768px < width < 1024px){
+    body{
+        margin: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        height: 100vh;       
+    }
+        
+    header {
+        grid-column: 1 ;
+        grid-row: 1;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    section {
+        grid-column: 1 / 4;
+        grid-row: 2 / 6;
+        background-color: #6fa3ef;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    menu {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        background-color: #f44336;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    main {
+        grid-column: 1;
+        grid-row:  6 / 8 ;
+        background-color: #1a2b3c;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    #div1 {
+        grid-column: 1 / 7;
+        grid-row: 8;
+        background-color: #ffd700;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    #div2 {
+        grid-column: 3;
+        grid-row: 7;
+        background-color: #32a852;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    #div3 {
+        grid-column: 3;
+        grid-row: 6;
+        background-color: #b0c4de;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    }
