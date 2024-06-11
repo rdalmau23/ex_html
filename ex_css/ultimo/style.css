@@ -98,6 +98,7 @@ section .show-more {
 }
 aside {
   margin: 20px;
+  width: 40%;
 }
 aside section {
   background-color: white;
@@ -137,6 +138,7 @@ footer {
 article{
   display: grid;
   grid-template-columns: 2fr 2fr;
+  width: 1000px;
 }
 .persons{
   width: 30px;
