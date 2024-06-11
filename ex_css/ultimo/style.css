@@ -187,11 +187,11 @@ body section button {
   height: 35px;
 }
 /*# sourceMappingURL=style.css.map */
-li{
+nav li{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-li:hover{
+nav li:hover{
   background-color: #00000013;
 }
