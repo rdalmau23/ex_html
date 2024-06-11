@@ -118,6 +118,7 @@ aside section button {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 aside .live-chats ul {
   list-style: none;
@@ -151,6 +152,35 @@ article{
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+}
+body section button {
+  background-color: #da552f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#sub{
+  flex: 1;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 150px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.welcome{
+  margin-top: 20px;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 /*# sourceMappingURL=style.css.map */
