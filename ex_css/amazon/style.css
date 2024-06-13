@@ -42,7 +42,12 @@ main nav ul {
 }
 
 main nav li {
-    margin-right: 15px; 
+    margin-right: 15px;
+
+}
+#phil li::marker {
+    color: rgb(188, 188, 188);
+    
 }
 
 main nav a {
