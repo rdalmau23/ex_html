@@ -94,10 +94,14 @@ main nav a:hover {
 }
 #orange{
     color: orange;
+    
 }
 #amarillo{
-    background-color: rgba(255, 255, 0, 0.292);
+    background-color: rgba(255, 230, 0, 0.207);
     margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 50px;
 }
 aside{
     display: flex;
