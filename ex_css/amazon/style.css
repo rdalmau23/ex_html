@@ -56,6 +56,7 @@ main nav a:hover {
 #phil{
     display: flex;
     justify-content: center;
+    align-items:start;
 }
 #phil div{
     margin-left: 30px;
