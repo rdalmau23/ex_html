@@ -1,0 +1,60 @@
+//- Includes
+include ../elements/_widget-flickrfeed
+
+.range.range-50
+  .cell-sm-6.cell-md-12
+    .blog-aside
+      .blog-aside__item
+        h5 Search the Blog
+        form.rd-search.search-form-classic(action="search-results.html" method="GET")
+          .form-wrap
+            input.form-input(id="rd-search-form-input" type="text" name="s" autocomplete="off")
+            label.form-label(for="rd-search-form-input") Search
+          button.rd-search-submit(type='submit')
+
+      .blog-aside__item
+        h5 Archive
+        .list-group-2
+          ul.list-marked
+            li: a(href='#') Jan 2017
+            li: a(href='#') Mar 2017
+            li: a(href='#') May 2017
+            li: a(href='#') Jul 2017
+          ul.list-marked
+            li: a(href='#') Feb 2017
+            li: a(href='#') Apr 2017
+            li: a(href='#') Jun 2017
+
+      .blog-aside__item
+        h5 Gallery
+        +widget-flickrfeed("tm_62244", {"data-image_q": "src"}, {
+          "style": "gallery-group-2",
+          "dataSize": "1200x800",
+          "img": {
+            "width": 165,
+            "height": 165
+          }
+        }, 6)
+
+
+  .cell-sm-6.cell-md-12
+    .blog-aside
+      .blog-aside__item
+        h5 Recent Blog Posts
+        ul.list-blog
+          li.list-blog__item
+            p.list-blog__item-title: a(href=postLink) The Martial Arts Woman
+            p.list-blog__item-time June 21, 2017
+          li.list-blog__item
+            p.list-blog__item-title: a(href=postLink) The Martial View
+            p.list-blog__item-time June 21, 2017
+          li.list-blog__item
+            p.list-blog__item-title: a(href=postLink) Karate Shinseidokan Dojo
+            p.list-blog__item-time June 21, 2017
+          li.list-blog__item
+            p.list-blog__item-title: a(href=postLink) Learning From Your Mistakes
+            p.list-blog__item-time June 21, 2017
+
+      .blog-aside__item
+        a.banner(href='#')
+          +jpg('banner-340x500')

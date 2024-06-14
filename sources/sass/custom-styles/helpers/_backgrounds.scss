@@ -1,0 +1,186 @@
+// Contexts
+// -------------------------
+
+%context-dark {
+  color: $white;
+
+  #{headings()} {
+    color: $white;
+  }
+
+  a {
+    @include link(inherit, $secondary);
+
+    &.icon-default {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .icon-default {
+    color: $white;
+  }
+
+  .rd-mailform {
+    .form-input {
+      background: rgba($white, .47);
+    }
+
+    .form-input,
+    .form-label,
+    .form-label-outside,
+    .form-validation {
+      color: $white;
+    }
+  }
+
+  .button-gray-light-outline {
+    @include btn-variant($white, transparent, $white, $gray-darker, $primary, $primary);
+  }
+
+  .box-counter {
+    &,
+    .box-counter-title {
+      color: $white;
+    }
+  }
+
+  .range-custom-bordered {
+    [class*='cell'] {
+      border-color: rgba(#6a716f, .2);
+    }
+  }
+
+  .link-control {
+    .link-control__inner {
+      &,
+      &:before,
+      &:after {
+        background: rgba($white, .22);
+      }
+    }
+  }
+
+  .rd-audio-title,
+  .rd-audio-author {
+    color: $white;
+  }
+
+  .box-decorated-lines {
+    border-color: rgba($white, .24);
+  }
+
+  .contact-info-icon {
+    a {
+      color: $white;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .post-thin {
+    border-bottom-color: rgba($white, .21);
+
+    > * + * {
+      &:before {
+        border-color: rgba($white, .21);
+      }
+    }
+
+    /*.button-primary.button-effect-ujarak {
+      &:hover {
+        color: $gray-darker;
+        border-color: $white;
+      }
+      &:before {
+        background: $white;
+      }
+    }*/
+  }
+
+  .post-thin__title a {
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+%context-light {
+  #{headings()} {
+    color: $headings-color;
+  }
+}
+
+.context-dark {
+  @extend %context-dark;
+}
+
+.context-light {
+  @extend %context-light;
+}
+
+// Background colors
+//
+.bg-white {
+  @include bg-behaviour($white);
+}
+
+.bg-white + .pre-footer-fullwidth { border-top: 1px solid $gray-2; }
+
+.bg-primary {
+  @extend %context-dark;
+  @include bg-behaviour($primary);
+}
+
+.bg-gray-dark {
+  @extend %context-dark;
+  @include bg-behaviour($gray-dark);
+}
+
+.bg-gray-darker {
+  @extend %context-dark;
+  @include bg-behaviour($gray-dark);
+}
+
+.bg-gray-lighter {
+  @include bg-behaviour($gray-lighter);
+
+  .quote-classic {
+    &__mark svg {
+      fill: #dadbe2;
+    }
+  }
+
+  .form-input,
+  .select2-container--bootstrap .select2-selection {
+    background: $white;
+  }
+
+  .post-event {
+    background: $white;
+  }
+}
+
+.bg-gray-3 {
+  @extend %context-dark;
+  @include bg-behaviour($gray-3);
+}
+
+// Background image
+//
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-fixed {
+  .desktop & {
+    @media (min-width: $screen-md-min) {
+      background-attachment: fixed;
+    }
+  }
+}

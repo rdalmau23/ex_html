@@ -1,0 +1,370 @@
+//
+// Offsets
+// --------------------------------------------------
+
+// Elements
+// -------------------------
+* + p {
+  margin-top: 15px;
+}
+
+p + * {
+  margin-top: 20px;
+}
+
+* + .big {
+  margin-top: 18px;
+}
+
+* + .text-extra-large {
+  margin-top: 30px;
+}
+
+* + .link-arrow {
+  margin-top: 16px;
+}
+
+* + .privacy-link {
+  margin-top: 30px;
+}
+
+* + .list-md {
+  margin-top: 30px;
+}
+
+* + .list-marked {
+  margin-top: 12px;
+}
+
+* + .list-ordered {
+  margin-top: 12px;
+}
+
+* + .list-indexed-boxed {
+  margin-top: 40px;
+}
+
+* + .list-terms {
+  margin-top: 25px;
+}
+
+* + .list-icons {
+  margin-top: 45px;
+}
+
+* + .group-sm {
+  margin-top: 25px;
+}
+
+* + .group-xl {
+  margin-top: 35px;
+}
+
+* + .quote-primary {
+  margin-top: 35px;
+}
+
+* + .thumb-default {
+  margin-top: 35px;
+}
+
+* + .rd-mailform {
+  margin-top: 35px;
+}
+
+* + .range {
+  margin-top: $range-ws;
+}
+
+* + .group-lg {
+  margin-top: 30px;
+}
+
+* + .list-group-2 {
+  margin-top: 10px;
+}
+
+* + .gallery-group-2 {
+  margin-top: 20px;
+}
+
+* + .list-blog {
+  margin-top: 15px;
+}
+
+* + .quote-classic {
+  margin-top: 25px;
+}
+
+* + .owl-carousel {
+  margin-top: 35px;
+}
+
+.quote-classic + * {
+  margin-top: 22px;
+}
+
+* + .list-lg {
+  margin-top: 35px;
+}
+
+* + .list-indexed-boxed {
+  margin-top: 80px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: 100px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    margin-top: 40px;
+  }
+}
+
+p + p {
+  margin-top: 18px;
+}
+
+.hgroup + p {
+  margin-top: 18px;
+}
+
+.countdown-wrap + p {
+  margin-top: 35px;
+}
+
+.text-extra-large + p {
+  margin-top: 30px;
+}
+
+html {
+  * + .offset-top-30 {
+    margin-top: 30px;
+  }
+}
+
+* + h5,
+* + .heading-5 {
+  margin-top: 25px;
+}
+
+.post-single + .divider {
+  margin-top: 40px;
+}
+
+h1 + p,
+.heading-1 + p {
+  margin-top: 9px;
+}
+
+h2 + p,
+.heading-2 + p {
+  margin-top: 19px;
+}
+
+h3 + p,
+.heading-3 + p {
+}
+
+h4 + p,
+.heading-4 + p {
+  margin-top: 15px;
+}
+
+h5 + p,
+.heading-5 + p {
+  margin-top: 10px;
+}
+
+h2 + .countdown-wrap,
+.heading-2 + .countdown-wrap {
+  margin-top: 20px;
+}
+
+.heading-complex + .big {
+  margin-top: 20px;
+}
+
+.link + .list-terms-inline {
+  margin-top: 0;
+}
+
+.rd-audio + .h2,
+.rd-audio + .heading-2 {
+  margin-top: 25px;
+}
+
+.hgroup {
+  * + h2,
+  * + .heading-2 {
+    margin-top: 10px;
+  }
+
+  * + h5,
+  * + .heading-5 {
+    margin-top: 20px;
+  }
+
+  * + h6,
+  * + .heading-6 {
+    margin-top: 15px;
+  }
+}
+
+h2 + .big,
+.heading-2 + .big {
+  margin-top: 18px;
+}
+
+.shell + .shell {
+  margin-top: 30px;
+}
+
+.page {
+  * + .offset-custom-1 {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  * + .big {
+    margin-top: 24px;
+  }
+
+  * + .text-extra-large {
+    margin-top: 40px;
+  }
+
+  * + .list-md {
+    margin-top: 40px;
+  }
+
+  * + .list-terms {
+    margin-top: 32px;
+  }
+
+  * + .thumb-default {
+    margin-top: 42px;
+  }
+
+  * + .quote-primary {
+    margin-top: 45px;
+  }
+
+  * + .group-sm {
+    margin-top: 45px;
+  }
+
+  * + .group-xl {
+    margin-top: 50px;
+  }
+
+  * + .rd-mailform {
+    margin-top: 50px;
+  }
+
+  p + p {
+    margin-top: 24px;
+  }
+
+  .hgroup + .big {
+    margin-top: 14px;
+  }
+
+  .text-extra-large + p {
+    margin-top: 50px;
+  }
+
+  .countdown-wrap + p {
+    margin-top: 70px;
+  }
+
+  h4 + p,
+  .heading-4 + p {
+    margin-top: 20px;
+  }
+
+  .list-md + .button {
+    margin-top: 45px;
+  }
+
+  .big + .button {
+    margin-top: 30px;
+  }
+
+  .hgroup {
+    * + h2,
+    * + .heading-2 {
+      margin-top: 12px;
+    }
+  }
+
+  .page {
+    * + .offset-custom-1 {
+      margin-top: 55px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  * + .list-lg {
+    margin-top: 50px;
+  }
+
+  .post-single + .divider {
+    margin-top: 50px;
+  }
+}
+
+// Range spacing
+// -------------------------
+.range-20 {
+  @include responsive-offset(20px);
+}
+
+.range-30 {
+  @include responsive-offset(30px);
+}
+
+.range-50 {
+  @include responsive-offset(40px);
+}
+
+.range-80 {
+  @include responsive-offset(50px);
+}
+
+@media (min-width: $screen-sm-min) {
+  .range-50 {
+    @include responsive-offset-media(50px);
+  }
+
+  .range-80 {
+    @include responsive-offset-media(80px);
+  }
+}
+
+// Insets
+// -------------------------
+.inset-sm-25 {
+  padding: 0 25px;
+}
+
+@media (min-width: $screen-md-min) {
+  .inset-md-top-30 {
+    padding-top: 30px;
+  }
+
+  .inset-1 {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .inset-lg-left-100 {
+    padding-left: 100px;
+  }
+
+  .inset-1 {
+    padding-top: 60px;
+  }
+}

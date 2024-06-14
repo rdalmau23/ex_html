@@ -1,0 +1,619 @@
+//
+// Thumb
+// --------------------------------------------------
+
+.thumb-default {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    color: $gray-1;
+  }
+
+  * + figcaption {
+    margin-top: 10px;
+  }
+}
+
+// Figure bordered
+.figure-bordered {
+  position: relative;
+  padding: 10px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 3px solid $primary;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .figure-bordered {
+    padding: 18px;
+
+    &:before {
+      border-width: 5px;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .figure-bordered {
+    max-width: 530px;
+  }
+}
+
+.figure-1 {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Thumb bordered
+.thumb-bordered {
+  text-align: center;
+
+  * + .list-inline-xxs {
+    margin-top: 16px;
+  }
+}
+
+.thumb-bordered__body {
+  padding: 20px;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: $gray-5;
+}
+
+.thumb-bordered__title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  color: $gray-darker;
+
+  a {
+    display: inline;
+  }
+}
+
+.thumb-bordered__caption {
+  letter-spacing: 0;
+}
+
+* + .thumb-bordered__caption {
+  margin-top: 6px;
+}
+
+@media (max-width: $screen-xs-max) {
+  .thumb-bordered {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .desktop {
+    .thumb-bordered {
+      position: relative;
+      z-index: 1;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        border: 5px solid $primary;
+        transition: opacity .3s ease, left .6s ease, right .6s ease, top .6s ease, bottom .6s ease;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+          top: -13px;
+          right: -13px;
+          bottom: -13px;
+          left: -13px;
+          transition: opacity .8s ease, left .5s ease, right .5s ease, top .5s ease, bottom .5s ease;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .thumb-bordered__title {
+    font-size: $font-size-h5;
+  }
+
+  .thumb-bordered__caption {
+    font-size: 16px;
+  }
+
+  * + .thumb-bordered__caption {
+    margin-top: 2px;
+  }
+}
+
+// Thumb square minimal
+.thumb-square-minimal {
+  position: relative;
+  display: block;
+  padding: 0 0 100% 0;
+  margin: 0;
+  border: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+
+  figure {
+    margin: -1px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: none;
+    min-width: 101%;
+    min-height: 101%;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+  }
+
+  &:before {
+    content: '\f00e';
+    top: 33%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    font: 400 24px/24px "FontAwesome";
+    color: $white;
+    z-index: 100;
+    opacity: 0;
+    transition: .36s ease;
+    text-shadow: 0 0 3px rgba($gray-dark, .2);
+    //will-change: transform;
+    -webkit-filter: blur(0);
+  }
+
+  &:after {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $gray-darker;
+    opacity: .04;
+    transition: opacity .33s ease-in-out;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+      top: 50%;
+    }
+
+    &:after {
+      opacity: .35;
+    }
+  }
+}
+
+// Thumb bubba
+.thumb-bubba {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  background: $primary;
+
+  figure {
+    overflow: hidden;
+    margin-left: -1px;
+    margin-right: -1px;
+  }
+
+  img {
+    position: relative;
+    display: block;
+    max-width: 101%;
+    opacity: 0.6;
+  }
+}
+
+.thumb-bubba__overlay {
+  position: absolute;
+  padding: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    pointer-events: none;
+  }
+
+  &::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  &::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+
+  > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  .thumb-bubba {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .thumb-bubba__overlay {
+    &::before,
+    &::after {
+      top: 15px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+    }
+  }
+}
+
+.desktop {
+  @media (min-width: $screen-md-min) {
+    .thumb-bubba {
+      img {
+        position: relative;
+        opacity: 1;
+        transition: opacity 0.35s, transform 0.7s;
+        will-change: opacity, transform;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.7;
+          transform: scale(1.16);
+        }
+
+        .thumb-bubba__overlay::before,
+        .thumb-bubba__overlay::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .thumb-bubba__overlay {
+      &::before,
+      &::after {
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+        will-change: transform, opacity;
+      }
+
+      &::before {
+        transform: scale(0, 1);
+      }
+
+      &::after {
+        transform: scale(1, 0);
+      }
+    }
+  }
+}
+
+* + .thumb-bubba {
+  margin-top: 30px;
+}
+
+// Thumb layla
+.thumb-layla {
+  position: relative;
+  overflow: hidden;
+  background: #18a367;
+  text-align: center;
+  cursor: pointer;
+
+  figure {
+    position: relative;
+    padding-bottom: 100%;
+  }
+
+  img {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: auto;
+    max-width: none;
+    min-width: 101%;
+    min-height: 101%;
+    opacity: 0.7;
+  }
+}
+
+.thumb-layla__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    transition: 0.3s;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 25px;
+    right: 15px;
+    bottom: 25px;
+    left: 15px;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+  }
+
+  &::after {
+    top: 15px;
+    right: 25px;
+    bottom: 15px;
+    left: 25px;
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
+  }
+
+  > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .thumb-layla {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .thumb-layla.thumb-layla_horizontal {
+    figure {
+      padding-bottom: 50%;
+    }
+  }
+
+  .thumb-layla.thumb-layla_vertical {
+    figure {
+      padding-bottom: 200%;
+    }
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  .thumb-layla__overlay {
+    &::before {
+      top: 50px;
+      right: 30px;
+      bottom: 50px;
+      left: 30px;
+    }
+
+    &::after {
+      top: 30px;
+      right: 50px;
+      bottom: 30px;
+      left: 50px;
+    }
+  }
+}
+
+.desktop {
+  @media (min-width: $screen-md-min) {
+    .thumb-layla {
+      img {
+        opacity: 1;
+        min-height: calc(100% + 30px);
+        transform: translate3d(-50%, -30px, 0);
+        margin-bottom: -30px;
+      }
+
+      img,
+      &::before,
+      &::after {
+        will-change: opacity, transform;
+        transition: opacity 0.35s, transform 0.35s;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.7;
+          transform: translate3d(-50%, 0, 0);
+        }
+
+        .thumb-layla__overlay::before,
+        .thumb-layla__overlay::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .thumb-layla__overlay {
+      &::before,
+      &::after {
+        opacity: 0;
+      }
+
+      &::before {
+        transform-origin: 0 0;
+        transform: scale(0, 1);
+      }
+
+      &::after {
+        transform: scale(1, 0);
+        transform-origin: 100% 0;
+      }
+    }
+  }
+}
+
+// Thumb chico
+.thumb-chico {
+  position: relative;
+  overflow: hidden;
+  background: $primary;
+  text-align: center;
+  cursor: pointer;
+
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+  }
+}
+
+.thumb-chico__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    pointer-events: none;
+  }
+
+  > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+  }
+}
+
+.desktop {
+  @media (min-width: $screen-md-min) {
+    .thumb-chico {
+      img {
+        opacity: 1;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: scale(1.12);
+      }
+
+      &:hover {
+        img {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+
+        .thumb-chico__overlay::before {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .thumb-chico__overlay {
+      &::before {
+        transform: scale(1.1);
+        opacity: 0;
+        transition: opacity 0.35s, transform 0.35s;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .thumb-chico {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

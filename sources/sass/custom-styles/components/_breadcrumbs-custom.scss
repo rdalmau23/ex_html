@@ -1,0 +1,75 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+$breadcrumb-padding-vertical:   8px;
+$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-bg:                 #f5f5f5;
+$breadcrumb-color:              $primary;
+$breadcrumb-active-color:       $gray-light;
+$breadcrumb-separator:          "\e8e4";
+
+.breadcrumbs-custom {
+  position: relative;
+  vertical-align: middle;
+
+  a {
+    display: inline;
+    vertical-align: middle;
+    &, &:active, &:focus {
+      color: $breadcrumb-color;
+    }
+  }
+
+  li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 36px;
+    font-size: 14px;
+  }
+
+  li:after {
+    content: $breadcrumb-separator;
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    display: inline-block;
+    color: rgba($white, .5);
+    font: 400 14px/16px 'Material Icons';
+    transform: translateY(-50%);
+  }
+
+  li:last-child {
+    padding-right: 0;
+    &:after {
+      display: none;
+    }
+  }
+
+  a:hover,
+  li.active {
+    color: $breadcrumb-active-color;
+  }
+}
+
+* + .breadcrumbs-custom {
+  margin-top: 8px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .breadcrumbs-custom {
+    li {
+      padding-right: 44px;
+      font-size: 18px;
+    }
+
+    li:after {
+      right: 13px;
+      font-size: 18px;
+    }
+  }
+
+  * + .breadcrumbs-custom {
+    margin-top: 20px;
+  }
+}

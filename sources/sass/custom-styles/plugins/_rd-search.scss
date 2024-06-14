@@ -1,0 +1,232 @@
+//
+// Search Results
+// --------------------------------------------------
+
+.rd-search-results-live {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  max-height: 600px;
+  overflow-y: auto;
+  margin: 0px 0 0;
+  font-size: 16px;
+  line-height: 34px;
+  text-align: left;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+
+  #search-results {
+    padding: 16px 12px 12px;
+    border: 1px solid $gray-lighter;
+    color: $text-color;
+    background: $white;
+  }
+
+  p {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .search-quick-result {
+    font-family: $font-family-sec;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $gray-darker;
+  }
+
+  .search_list {
+    margin-top: 11px;
+
+    li + li {
+      margin-top: 20px;
+    }
+  }
+
+  .search_link {
+    color: $gray-darker;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  .search_error {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .search_title {
+    font-size: 14px;
+  }
+
+  .search_submit {
+    display: block;
+    padding: 4px;
+    border: 2px solid $gray-lighter;
+    font-size: 13px;
+    font-weight: 700;
+    color: $gray-darker;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      color: $gray-darker;
+      background: $primary;
+      border-color: $primary;
+    }
+  }
+
+  .match {
+    display: none;
+  }
+
+  .not-empty ~ & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// RD Search results
+//
+.rd-search-results {
+  .search_list {
+    counter-reset: li;
+    text-align: left;
+    padding-left: 0;
+    font-size: 18px;
+    list-style-type: none;
+    overflow: hidden;
+
+    li div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      white-space: nowrap;
+    }
+
+    li:only-child::before {
+      display: none;
+    }
+  }
+
+  .result-item {
+    position: relative;
+    padding-left: 40px;
+    font-size: $font-size-base;
+    color: $gray-darker;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      content: counter(li, decimal-leading-zero) '.';
+      counter-increment: li;
+      color: $gray;
+    }
+  }
+
+  .result-item + .result-item {
+    margin-top: 40px;
+  }
+
+  .search_title {
+    font-size: 18px;
+    color: $gray-base;
+  }
+
+  .search {
+    color: $white;
+    padding: 0 .25em;
+    background: $secondary;
+  }
+
+  .match {
+    font: 400 14px $font-family-base;
+    color: $gray;
+  }
+
+
+  * + .match {
+    margin-top: 2px;
+  }
+
+  * + p {
+    margin-top: 16px;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .result-item {
+      padding-left: 50px;
+    }
+
+    .result-item + .result-item {
+      margin-top: 50px;
+    }
+  }
+}
+
+* + .rd-search-results {
+  margin-top: 40px;
+}
+
+@media (min-width: $screen-sm-min) {
+  * + .rd-search-results {
+    margin-top: 55px;
+  }
+}
+
+// Form search classic
+//
+.search-form-classic {
+  position: relative;
+
+  .form-input {
+    padding-right: 45px;
+    overflow: hidden;
+  }
+
+  .form-input,
+  .form-label {
+    letter-spacing: .05em;
+  }
+
+  .rd-search-submit {
+    @include reset-button;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+    width: 40px;
+    padding-right: 2px;
+    text-align: center;
+    color: $secondary;
+
+    &:before {
+      position: relative;
+      top: -1px;
+      content: '\e09c';
+      font: 400 24px 'fl-bigmug-line';
+      line-height: 1;
+      transition: .33s all ease;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &:hover{
+      color: $gray-darker;
+    }
+  }
+}
+
+* + .search-form-classic {
+  margin-top: 25px;
+}

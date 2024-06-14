@@ -1,0 +1,378 @@
+extends  ../_skeleton
+
+include ../elements/_ui-thumb-bordered
+include ../elements/_ui-post-boxed-group
+include ../elements/_ui-post-event  
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+
+block title
+  title Home
+
+block page
+  // Page Header
+  include ../sections/_header-default
+  include ../sections/_section-slider
+    
+    
+  // About
+  section.section-lg.section-md-alternate.bg-white
+    .shell
+      .range.range-sm-center.range-50
+        .cell-sm-9.cell-md-6
+          .inset-1
+            .hgroup
+              h2 About Our School
+              h6 Ultimate Fighting Martial Arts Club
+
+            p While the story of this Martial Arts school is not as tumultuous and vivid as some stories out of ancient Chinese or Japanese epos tales, still we have more than 20 years of our proud history… It was in 1996, when the founder of the club, Randy Bailey was still considering whether to go to the college for getting a law degree or pursue a career.
+            p Luckily for the students he and his instructors have taught since, Randy decided that founding a school of his own would be the best decision. During those 20 years Randy and his colleagues have achieved a tremendous level of success, helping thousands of individuals in becoming more empowered, fit, healthy and mind-balanced!
+
+        .cell-sm-9.cell-md-6
+          figure.figure-bordered.block-md-right
+            +jpg('welcome-1-485x479')
+  ='\n'
+
+  // Our Values
+  section.section-lg.bg-gray-lighter.text-center 
+    .shell
+      h2 What We Offer
+      ul.list-indexed-boxed
+        li.list-indexed-boxed-item 
+          .list-indexed-boxed-item__index  
+          .list-indexed-boxed-item__body
+            p.list-indexed-boxed-item__title Qualified Coaches
+            p Our instructors and coaches are highly experienced and provide a positive environment that makes training fun and enjoyable. All physical techniques taught are practical and sensible.
+
+        li.list-indexed-boxed-item
+          .list-indexed-boxed-item__index
+          .list-indexed-boxed-item__body
+            p.list-indexed-boxed-item__title Good Location
+            p Finding the right location for a martial arts studio is a major factor in your success.  It is also important to make sure the studio is located in a safe area.
+
+        li.list-indexed-boxed-item
+          .list-indexed-boxed-item__index
+          .list-indexed-boxed-item__body
+            p.list-indexed-boxed-item__title Quality Rooms and Rings
+            p We offer premier-quality flooring for training facilities,   along with all the products necessary for outfitting any gym or studio to its maximum potential.
+
+        li.list-indexed-boxed-item
+          .list-indexed-boxed-item__index
+          .list-indexed-boxed-item__body
+            p.list-indexed-boxed-item__title Modern Equipment
+            p We are focused on a wide variety of martial arts training equipment. The use of training equipment is always supervised by an experienced martial arts instructor. 
+  ='\n'
+
+  // Our Team
+  section.section-md.bg-white.text-center
+    .shell
+      h2 Our Team
+      .range.range-30
+        .cell-sm-6.cell-md-3
+          +thumb-bordered({
+            img: 'randy-bailey-270x255',
+            title: "Randy Bailey",
+            caption: "Trainer"
+          })
+
+        .cell-sm-6.cell-md-3
+          +thumb-bordered({
+            img: 'hugh-barrister-270x255',
+            title: "Hugh Barrister",
+            caption: "Instructor"
+          })
+
+        .cell-sm-6.cell-md-3
+          +thumb-bordered({
+            img: 'susan-stone-270x255',
+            title: "Susan Stone",
+            caption: "Coach"
+          })
+
+        .cell-sm-6.cell-md-3
+          +thumb-bordered({
+            img: 'jane-smith-270x255',
+            title: "Jack Smith",
+            caption: "Coach"
+          })
+  ='\n'
+  // Becoming a Member of Our Church
+ 
+  section.section.parallax-container.bg-gray-dark.text-center.bg-black.bg-image(data-parallax-img='images/bg-image-3.jpg')
+    .parallax-content    
+      .section-md
+        .shell
+          .range.range-sm-center
+            .cell-sm-10.cell-md-8.cell-lg-7
+              h3 Subscribe to Our Newsletter
+              p.big.text-width-small Sign up to our newsletter and be the first to know about latest school news, special offers, events, and discounts.
+              // RD Mailform
+              form.rd-mailform.form-inline.form-center(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+                .form-wrap
+                  input#subscribe-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  label.form-label(for="subscribe-email") info@demolink.org
+                button(type="submit").button.button-secondary.button-effect-ujarak Subscribe
+  ='\n'
+  
+  // Programs
+  section.section-md.bg-gray-lighter.text-center
+    .shell
+      h2 Martial Arts Groups
+      p.big.text-width-large A wide variety of hard and soft styles are taught at Martial Arts School. It's a great opportunity to deepen into your own practice and cross-train in styles that are new to you.
+      .range.range-30
+        .cell-sm-6.cell-md-4 
+          +post-boxed({
+            img: 'groups-1-370x278',
+            time: 'Thursdays, 7:30 PM',
+            title: 'Aikido'
+          })
+
+        .cell-sm-6.cell-md-4
+          +post-boxed({
+            img: 'groups-2-370x278',
+            time: 'Mondays, 6:30 PM ',
+            title: 'Boxing'
+          })
+
+        .cell-sm-6.cell-md-4 
+          +post-boxed({
+            img: 'groups-3-370x278',
+            time: 'Wednesdays, 7:30 PM',
+            title: 'MMA'
+          })
+
+        .cell-sm-6.cell-md-4
+          +post-boxed({
+            img: 'groups-4-370x278',
+            time: 'Thursdays, 7:30 PM',
+            title: 'Karate'
+          })
+
+        .cell-sm-6.cell-md-4
+          +post-boxed({
+            img: 'groups-5-370x278',
+            time: 'Saturdays, 6:30 PM',
+            title: 'Women`s Group'
+          })
+
+        .cell-sm-6.cell-md-4
+          +post-boxed({
+            img: 'groups-6-370x278',
+            time: 'Wednesdays, 7:30 PM',
+            title: 'Children`s Group'
+          })
+  ='\n'
+
+  section.section.parallax-container.bg-gray-dark.text-center.bg-black.bg-image(data-parallax-img='images/bg-image-6.jpg')
+    .parallax-content
+      .section-md
+          .shell
+            .range.range-sm-center
+              .cell-sm-10
+                h2 Find Your Group
+                p Special Training offers classes for all skill levels.  Whether you've trained for a day or a decade, you'll find classes that challenge and inspire you.   Every session includes open classes for all levels of experience.
+                a.button.button-primary.button-effect-ujarak(href='#modal' data-toggle='modal') Join Our Groups
+  ='\n'
+  // Upcoming Events
+  section.section-md.bg-gray-lighter.text-center
+    .shell
+      h2 Upcoming Events
+
+      .range.range-sm-center.range-md-left.range-30
+        .cell-sm-9.cell-md-6
+          +post-event({
+            img: 'event-1-570x570',
+            time: ['11', 'Nov'],
+            title: "Women’s Open Training",
+            location: 'Local Gym Class 233 Main St. New York, United States',
+            eventTime: 'Friday, 8:00-10:00 am'
+          })
+
+        .cell-sm-9.cell-md-6
+          +post-event({
+            img: 'event-2-570x570',
+            time: ['18', 'Nov'],
+            title: "Boxing Tricks",
+            location: 'Local Gym Class 233 Main St. New York, United States',
+            eventTime: 'Wednesday, 5:00 pm, Tuesday, 8:00 am'
+          })
+
+        .cell-sm-9.cell-md-6
+          +post-event({
+            img: 'event-3-570x570',
+            time: ['24', 'Oct'],
+            title: "Asian Martial Arts ",
+            location: 'Local Gym Class 233 Main St. New York, United States',
+            eventTime: 'Monday, 8:00 am, Wednesday, 5:00 pm'
+          })
+
+        .cell-sm-9.cell-md-6
+          +post-event({
+            img: 'event-4-570x570',
+            time: ['15', 'Oct'],
+            title: "MMA Championship",
+            location: 'Local Gym Class 233 Main St. New York, United States',
+            eventTime: 'Thursday, 5:00 pm, Friday, 8:00 am'
+          })
+
+        .cell-sm-9.cell-md-6 
+          +post-event({
+            img: 'event-5-570x570',
+            time: ['01', 'Oct'],
+            title: "Martial Arts for Children",
+            location: 'Local Gym Class 233 Main St. New York, United States',
+            eventTime: 'Tuesday, 10:00 am, Wednesday, 4:00 pm'
+          })
+
+        .cell-sm-9.cell-md-6
+          +post-event({
+            img: 'event-6-570x570',
+            time: ['29', 'Sept'],
+            title: "How to Choose Boxing Gloves",
+            location: 'Local Gym Class 233 Main St. New York, United States',
+            eventTime: 'Wednesday, 7:00 pm, Thursday, 9:00 am'
+          })
+
+    a.button.button-primary.button-effect-ujarak(href='#') View more
+  
+    
+  section.section.parallax-container.bg-gray-dark.text-center.bg-black.bg-image(data-parallax-img='images/bg-image-12.jpg')
+    .parallax-content
+      .section-md
+          .shell
+            .range.range-sm-center
+              .cell-sm-10.cell-md-8.cell-lg-7
+                h2 Get in Touch
+                p Let us answer your questions and help you plan your visit.
+                a.button.button-primary.button-effect-ujarak(href='' data-custom-scroll-to='contacts') Contact us
+  ='\n'
+  // Our Locations
+  section.section-md.bg-white.text-center
+    .shell
+      h2 Contact Information
+      p.big.text-width-small Choose your nearest location to see available training options and programs. We’d love to see you there.
+      .range.range-50
+        .cell-sm-6.cell-md-4
+          article.box-location
+            +jpg('locations-1-370x278')
+            .box-location__body
+              ul.list
+                li: a.object-inline(href='#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-big104
+                  span 818 Noe Street #[br] San Francisco, CA 94114
+
+                li: a.object-inline(href='callto:#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-phone351
+                  span +1 (215) 123-1212
+
+                li: a.object-inline(href='mailto:#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-opened25
+                  span mail@demolink.org
+
+        .cell-sm-6.cell-md-4
+          article.box-location
+            +jpg('locations-2-370x278')
+            .box-location__body
+              ul.list
+                li: a.object-inline(href='#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-big104
+                  span 9863-9867 Mill Road, #[br] Cambridge, MG09 99HT
+
+                li: a.object-inline(href='callto:#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-phone351
+                  span +1 (215) 123-1212
+
+                li: a.object-inline(href='mailto:#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-opened25
+                  span mail@demolink.org
+
+        .cell-sm-6.cell-md-4
+          article.box-location
+            +jpg('locations-3-370x278')
+            .box-location__body
+              ul.list
+                li: a(href='#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-big104
+                  span 9870 St. Vincent Place, #[br] Glasgow, DC 45 FR 45
+
+                li: a(href='callto:#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-phone351
+                  span +1 (215) 123-1212
+
+                li: a(href='mailto:#')
+                  span.icon.icon-xxs.icon-secondary.fl-bigmug-line-opened25
+                  span mail@demolink.org
+  ='\n'
+  // Contact Us
+  section.section-md.last-section.bg-white.text-center#contacts
+    .shell
+      h2 Contact Us
+      .range.range-sm-center
+        .cell-sm-10.cell-md-10.cell-lg-6
+          // RD Mailform
+          form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .range.range-sm-bottom.range-spacing-20.range-20
+              .cell-sm-6
+                .form-wrap
+                  input#contact-name.form-input(type="text" name="name" data-constraints='@Required')
+                  label.form-label(for="contact-name") Your Name
+
+              .cell-sm-6
+                .form-wrap
+                  input#contact-phone.form-input(type="text" name="phone" data-constraints='@Numeric')
+                  label.form-label(for="contact-phone") Phone
+
+              .cell-xs-12
+                .form-wrap
+                  textarea#contact-message.form-input(name="message" data-constraints="@Required")
+                  label.form-label(for="contact-message") Your Message
+
+              .cell-sm-6
+                .form-wrap
+                  input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  label.form-label(for="contact-email") E-mail
+
+              .cell-sm-6
+                button(type="submit").button.button-primary.button-effect-ujarak.button-block send message
+  ='\n'
+  
+  include ../sections/_footer-default
+  // coded by barber 
+  
+  
+  // Modal
+  #modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') &times;
+          h4.modal-title Join the Group
+        .modal-body
+          form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .range.range-sm-bottom.range-spacing-20.range-20
+              .cell-sm-12
+                .form-wrap
+                  input#select-group-name.form-input(type="text" name="name" data-constraints='@Required')
+                  label.form-label(for="select-group-name") Your Name
+                  
+              .cell-sm-12
+                .form-wrap
+                  input#select-group-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  label.form-label(for="select-group-email") E-mail
+              .cell-sm-12
+                .form-wrap
+                  //Select 2
+                  select#select-group.form-input.select-filter( data-placeholder="Select the Group" data-minimum-results-for-search="Infinity", data-constraints="@Required")
+                    option
+                    option(value="2") Aikido Thursdays, 7:30 PM
+                    option(value="3") Boxing Wednesdays, 7:30 PM
+                    option(value="4") Karate Thursdays, 7:30 PM
+                    option(value="5") Women`s Group Saturday, 6:30 PM
+                    option(value="6") Children`s Group Wednesdays, 7:30 PM
+              .cell-sm-12
+                button(type="submit").button.button-primary.button-effect-ujarak.button-block Join the Group
+          
+        

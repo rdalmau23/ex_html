@@ -1,0 +1,72 @@
+//
+// Utilities
+// --------------------------------------------------
+
+// Grid related values
+//
+@mixin make-grid-parameter($parameter, $offset, $container, $col) {
+  @if $offset > 0 {
+    #{$parameter}: calc(50% - #{$container} / 2 + #{$offset} + (#{$container} / #{$cell-count}) * #{$col});
+  } @else if ($offset < 0) {
+    #{$parameter}: calc(50% - #{$container} / 2 - #{-$offset} + (#{$container} / #{$cell-count}) * #{$col});
+  } @else {
+    #{$parameter}: calc(50% - #{$container} / 2 + (#{$container} / #{$cell-count}) * #{$col});
+  }
+}
+
+// Spacing
+//
+@mixin spacing($x, $y : $x) {
+  position: relative;
+  transform: translateY(-$y);
+  margin-bottom: -$y;
+  margin-left: - round($x / 2);
+  margin-right: - round($x / 2);
+
+  > * {
+    margin-top: $y;
+    padding-left: round($x / 2);
+    padding-right: round($x / 2);
+
+    &:before {
+      content: '';
+      display: table;
+      width: 0;
+    }
+  }
+}
+
+// Inline list
+//
+@mixin inline-list($x, $y: $x) {
+  @include spacing($x, $y);
+  > * {
+    display: inline-block;
+  }
+}
+
+// Link
+//
+@mixin link($default-clr, $hover-color) {
+  &,
+  &:active,
+  &:focus {
+    color: $default-clr;
+  }
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+// Default bg behaviour
+//
+@mixin bg-behaviour($bg-color) {
+  background-color: $bg-color;
+
+  & + &.section-md,
+  & + &.section-lg,
+  & + &.section-xl {
+    padding-top: 0;
+  }
+}

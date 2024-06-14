@@ -1,0 +1,11 @@
+mixin thumb-bordered(obj)
+  // Thumb bordered
+  .thumb-bordered
+    +jpg(obj.img)
+    .thumb-bordered__body
+      p.thumb-bordered__title: a(href='#')=obj.title
+      p.thumb-bordered__caption=obj.caption
+      ul.list-inline-xxs
+        li: a.icon.icon-md.link-gray.fa.fa-facebook-square(href='#')
+        li: a.icon.icon-md.link-gray.fa.fa-instagram(href='#')
+        li: a.icon.icon-md.link-gray.fa.fa-twitter-square(href='#')

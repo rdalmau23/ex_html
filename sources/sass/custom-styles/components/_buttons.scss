@@ -1,0 +1,253 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Button General Styles
+.button {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  @include btn-size(11px, 45px, $btn-font-size, 24px, 0);
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  letter-spacing: .05em;
+  transition: .33s all ease;
+  border: 2px solid;
+  white-space: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+* + .button {
+  margin-top: 35px;
+}
+
+// Appearance style
+// --------------------------------------------------
+
+.page {
+  .button-default {
+    @include btn-variant($gray-darker, transparent, $gray, $white, $gray-darker, $gray-darker);
+  }
+
+  .button-primary {
+    @include btn-variant($gray-darker, $primary, $primary, $white, $secondary, $secondary);
+  }
+
+  .button-secondary {
+    @include btn-variant($white, $secondary, $secondary, $gray-darker, $primary, $primary);
+  }
+
+  .button-white-outline {
+    @include btn-variant($white, transparent, $white, $gray-darker, $primary, $primary);
+  }
+
+  .button-gray-light-outline {
+    @include btn-variant($gray-darker, transparent, $gray-light, $gray-darker, $primary, $primary);
+  }
+
+  .button-gray-9-outline {
+    @include btn-variant($secondary, transparent, $gray-9, $gray-darker, $primary, $primary);
+  }
+
+  .button-facebook {
+    &,
+    &:active,
+    &:focus {
+      color: $white;
+      background: $facebook;
+      border-color: $facebook;
+    }
+
+    &:hover {
+      color: $white;
+      background: darken($facebook, 11%);
+      border-color: darken($facebook, 11%);
+    }
+  }
+
+  .button-twitter {
+    &,
+    &:active,
+    &:focus {
+      color: $white;
+      background: $twitter;
+      border-color: $twitter;
+    }
+
+    &:hover {
+      color: $white;
+      background: darken($twitter, 11%);
+      border-color: darken($twitter, 11%);
+    }
+  }
+
+  .button-google {
+    &,
+    &:active,
+    &:focus {
+      color: $white;
+      background: $google;
+      border-color: $google;
+    }
+
+    &:hover {
+      color: $white;
+      background: darken($google, 11%);
+      border-color: darken($google, 11%);
+    }
+  }
+
+  .button-effect-ujarak {
+    position: relative;
+    z-index: 0;
+    transition: background 0.4s, border-color 0.4s, color 0.4s;
+    border-radius: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      background: $primary;
+      z-index: -1;
+      opacity: 0;
+      transform: scale3d(0.7, 1, 1);
+      transition: transform 0.4s, opacity 0.4s;
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    &,
+    &:before {
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    &:hover {
+      background-color: transparent;
+      &::before {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+      }
+    }
+
+    &.button-primary {
+      &::before {
+        background: $secondary;
+      }
+    }
+
+    &.button-gray-light-outline {
+      &::before {
+        background: $primary;
+      }
+    }
+
+    .button-gray-9-outline {
+      &::before {
+        background: $primary;
+      }
+    }
+  }
+}
+
+// Btn with shadow
+.button-shadow {
+  box-shadow: 0 9px 21px 0 rgba(#1e1e1e, 0.15);
+  border: 0;
+
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.button-xs {
+  @include btn-size(5px, 25px, 12px, 22px, 0);
+}
+
+.button-sm {
+  @include btn-size(6px, 25px, 13px, 24px, 0);
+}
+
+.button-lg {
+  @include btn-size(18px, 45px, 16px, 24px, 0);
+
+  @media (min-width: $screen-lg-min) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.button-xl {
+  @include btn-size(20px, 50px, 18px, 28px, 0);
+
+  @media (min-width: $screen-lg-min) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.button-circle {
+  border-radius: 35px;
+}
+
+.button-round {
+  border-radius: 3px;
+}
+
+.button-round-2 {
+  border-radius: 8px;
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.page .button {
+  &.button-icon {
+    @include display-inline-flex;
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+    vertical-align: middle;
+
+    .icon {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      vertical-align: middle;
+      color: inherit;
+      font-size: 1.65em;
+      line-height: 0;
+    }
+
+    &-left {
+      @include flex-direction(row);
+      .icon {
+        padding-right: 11px;
+      }
+    }
+
+    &-right {
+      @include flex-direction(row-reverse);
+      .icon {
+        padding-left: 11px;
+      }
+    }
+  }
+}
+
+// Button other styles
+// --------------------------------------------------
+.button-block {
+  display: block;
+  width: 100%;
+}
+

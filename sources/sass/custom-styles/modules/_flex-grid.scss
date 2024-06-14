@@ -1,0 +1,205 @@
+//
+// Flex Grid system
+// --------------------------------------------------
+
+// Base Grid Styles
+// --------------------------------------------------
+
+.shell,
+.shell-wide,
+.shell-fluid {
+  @include make-shell($cell-spacing);
+}
+
+.shell,
+.shell-wide {
+  min-width: $shell-width;
+  max-width: $shell-xs-width;
+
+  @media (min-width: $screen-sm-min) {
+    max-width: $shell-sm-width;
+  }
+
+  @media (min-width: $screen-md-min) {
+    max-width: $shell-md-width;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    max-width: $shell-lg-width;
+  }
+}
+
+.shell-wide {
+  @media (min-width: $screen-lg-min) {
+    max-width: $shell-xl-width;
+  }
+}
+
+.shell-fluid {
+  max-width: 100%;
+}
+
+.shell-condensed {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.shell + .shell.shell-fluid {
+  margin-top: 50px;
+}
+
+@media (min-width: $screen-lg-min) {
+  .shell-fluid-inset-lg-50 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.range {
+  @include make-range($cell-spacing);
+
+  > .range {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.range-spacer {
+  @include flex-basis(100%);
+}
+
+[class*="cell-"] {
+  @include make-cell-spacing($cell-spacing);
+}
+
+.cell-complex {
+  @include display-flex;
+  @include flex-direction(column);
+
+  .cell-complex__top,
+  .cell-complex__bottom {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.cell-complex__top {
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-grow(1);
+  > * {
+    max-width: 100%;
+  }
+}
+
+.cell-complex__bottom {
+  @include flex-shrink(0);
+}
+
+.range.range-spacing-20 {
+  margin-left: -5px;
+  margin-right: -5px;
+  [class*='cell'] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.range.range-spacing-responsive {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    margin-left: -5px;
+    margin-right: -5px;
+    [class*='cell'] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+// Create IE 9 and below degradation styles
+html.lt-ie-10 * + .range,
+* + .range {
+  margin-top: $range-ws;
+}
+
+html.lt-ie-10 * + [class*='cell-'],
+* + [class*='cell-'],
+html.lt-ie-10 * + .range-sm,
+* + .range-sm {
+  margin-top: $range-ws-sm;
+}
+
+html.lt-ie-10 * + .range-lg,
+* + .range-lg {
+  margin-top: $range-ws-lg;
+}
+
+html.lt-ie-10 .range-condensed,
+.range-condensed {
+  margin-left: 0;
+  margin-right: 0;
+
+  > [class*='cell'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  > * + [class*='cell'] {
+    margin-top: 0;
+  }
+}
+
+html.lt-ie-10 .range-narrow,
+.range-narrow {
+  @include make-range($cell-range-narrow);
+
+  > [class*='cell'] {
+    @include make-cell-spacing($cell-range-narrow);
+  }
+
+  > * + [class*='cell'] {
+    @include make-cell-spacing($cell-range-narrow);
+  }
+}
+
+// Flex Grid Styles
+// --------------------------------------------------
+
+.range {
+  @include display-flex();
+  @include flex(0 1 auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+
+  > .range {
+    @include flex-basis(100%);
+  }
+}
+
+.range-vertical {
+  @include flex-direction(column);
+}
+
+.range > [class*='cell'] {
+  @include flex(0 0 auto);
+  @include flex-basis(100%);
+}
+
+@each $resolution, $alias in ($screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl) {
+  @media (min-width: $resolution) {
+    * + [class*='cell-#{$alias}-'] {
+      margin-top: 0;
+    }
+
+    @include make-grid-system($alias, $cell-count);
+  }
+}
+
+html.lt-ie-10 {
+  .range > {
+    @include make-fallback($cell-count);
+  }
+}

@@ -1,0 +1,131 @@
+//
+// Jumbotron custom
+// --------------------------------------------------
+.jumbotron-custom {
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex-wrap(nowrap);
+  @include align-items(center);
+  @include justify-content(center);
+  pointer-events: none;
+
+  .shell,
+  &__inner {
+    width: 100%;
+  }
+}
+
+.jumbotron-custom__interactive > * {
+  pointer-events: auto;
+}
+
+.jumbotron-custom-1 {
+  min-height: calc(100vh - 56px);
+  text-align: center;
+
+  .jumbotron-custom__inner {
+    padding: 70px 0 85px;
+    > * {
+      pointer-events: auto;
+    }
+  }
+}
+
+.jumbotron-custom-2 {
+  min-height: calc(100vh - 56px);
+  text-align: center;
+
+  .jumbotron-custom__inner {
+    padding: 40px 0 80px;
+  }
+}
+
+.jumbotron-custom-3 {
+  min-height: calc(100vh - 56px);
+  text-align: center;
+  pointer-events: none;
+
+  .jumbotron-custom__inner {
+    padding: 40px 0 80px;
+  }
+}
+
+.ie-10,
+.ie-11 {
+  .jumbotron-custom {
+    display: block;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    > * {
+      display: inline-block;
+      width: 100%;
+      vertical-align: middle;
+      white-space: normal;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      min-height: inherit;
+      width: 0;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  // 1
+  .jumbotron-custom-1 {
+    min-height: 44.27vw;
+    .jumbotron-custom__inner {
+      padding: 150px 0 160px;
+    }
+  }
+
+  // 2
+  .jumbotron-custom-2 {
+    min-height: 30vw;
+    .jumbotron-custom__inner {
+      padding: 100px 0 120px;
+    }
+  }
+
+  // 3
+  .jumbotron-custom-3 {
+    min-height: 44.27vw;
+    .jumbotron-custom__inner {
+      padding: 140px 0 170px;
+    }
+  }
+}
+
+.desktop {
+  @media (min-width: $screen-md-min) {
+    // 1
+    .jumbotron-custom-1 {
+      min-height: 100vh;
+
+      .jumbotron-custom__inner {
+        padding: 150px 0 150px;
+      }
+    }
+
+    // 1
+    .jumbotron-custom-2 {
+      min-height: 100vh;
+
+      .jumbotron-custom__inner {
+        padding: 200px 0 150px;
+      }
+    }
+
+    // 3
+    .jumbotron-custom-3 {
+      min-height: calc(100vh - 135px);
+      .jumbotron-custom__inner {
+        padding: 140px 0 200px;
+      }
+    }
+
+  }
+}

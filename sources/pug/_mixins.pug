@@ -1,0 +1,138 @@
+- function getImageSize(name) { return name.match('[0-9]+(x)[0-9]+')[0].split('x'); }
+
+//- Img image
+mixin img(name, className)
+  - var size = getImageSize(name);
+  img(src='images/' + name, alt='', width=size[0], height=size[1], class=className)
+
+//- Jpg image
+mixin jpg(name, className)
+  - var size = getImageSize(name);
+  img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1], class=className)
+
+//- Png image
+mixin png(name, className)
+  - var size = getImageSize(name);
+  img(src='images/' + name + '.png', alt='', width=size[0], height=size[1], class=className)
+
+//- Pagination
+mixin pagination(modClass)
+  ul.pagination-custom(class=modClass)
+    li.disabled: a(href='#', aria-label="Previous")
+    li.active: a(href='#') 1
+    li: a(href='#') 2
+    li: a(href='#') 3
+    li: a(href='#', aria-label="Next")
+
+//- Table
+mixin table(classes, modClasses)
+  .table-custom-responsive(class=modClasses)
+    table.table-custom(class=classes)
+      thead
+        tr
+          th Column 1
+          th Column 2
+          th Column 3
+          th Column 4
+
+      tbody
+        tr
+          td Item #1
+          td Description
+          td Subtotal
+          td $3.00
+        tr
+          td Item #2
+          td Description
+          td Discount
+          td $3.00
+        tr
+          td Item #3
+          td Description
+          td Shipping
+          td $3.00
+
+        tr
+          td Item #4
+          td Description
+          td Tax
+          td $4.00
+
+      tfoot
+        tr
+          td All Items
+          td Description
+          td Your Total
+          td $13.00
+
+//- Double hexagon
+mixin double-hexagon
+  svg(version='1.1', baseprofile='tiny', xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='116.785px', height='101.994px', viewbox='0 0 117 102', overflow='scroll', xml:space='preserve')
+    path.outer-hexagon(fill='none', stroke='#000000', stroke-width='5', stroke-miterlimit='10', d='M113.905,50.997L86.149,99.494H30.637L2.88,50.997\
+               L30.637,2.5h55.512L113.905,50.997z')
+    path.inner-hexagon(fill='none', d='M100.402,50.997L79.397,87.495H37.388L16.383,50.997l21.005-36.498h42.009L100.402,50.997z')
+
+mixin audio-fixed-player
+  // RD Audio
+  .rd-audio.rd-audio-fixed-player.rd-audio-playlist-hidden(data-rd-audio-playlist-name='rd-playlist-1', data-rd-volume-bar-type='horizontal')
+    .rd-audio__left
+      // Prev Button
+      a.rd-audio__icon-control.rd-audio-prev.material-icons-skip_previous(href='#')
+      // Play\Pause button
+      a.rd-audio__icon-control.rd-audio-play-pause(href='#')
+      // Next Button
+      a.rd-audio__icon-control.rd-audio-next.material-icons-skip_next(href='#')
+      // Stop Button
+      a.rd-audio__icon-control.rd-audio-stop.material-icons-stop(href='#')
+
+    .rd-audio__center
+      // Progress bar
+      .rd-audio-progress-bar
+        // Progress bar Slider
+        .rd-audio-progress-bar-slider
+
+      .rd-audio-time
+        // currentTime
+        span.rd-audio-current-time
+        // Track duration
+        span.rd-audio-duration
+
+    .rd-audio__right
+      // Volume button
+      a.rd-audio__icon-control.rd-audio-volume.material-icons-volume_up(href='#')
+      // Volume bar
+      .rd-audio-volume-bar
+        // Progress bar Slider
+        .rd-audio-volume-bar-slider
+
+    .rd-audio-control-close
+
+mixin photoswipe()
+  // PhotoSwipe Gallery
+  .pswp(tabindex="-1" role="dialog" aria-hidden="true")
+    .pswp__bg
+    .pswp__scroll-wrap
+      .pswp__container
+        .pswp__item
+        .pswp__item
+        .pswp__item
+      .pswp__ui.pswp__ui--hidden
+        .pswp__top-bar
+          .pswp__counter
+
+          button.pswp__button.pswp__button--close(title="Close (Esc)")
+          button.pswp__button.pswp__button--share(title="Share")
+          button.pswp__button.pswp__button--fs(title="Toggle fullscreen")
+          button.pswp__button.pswp__button--zoom(title="Zoom in/out")
+          .pswp__preloader
+            .pswp__preloader__icn
+              .pswp__preloader__cut
+                .pswp__preloader__donut
+        .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+          .pswp__share-tooltip
+
+        button.pswp__button.pswp__button--arrow--left(title="Previous (arrow left)")
+
+        button.pswp__button.pswp__button--arrow--right(title="Next (arrow right)")
+        .pswp__caption
+          .pswp__caption__cent

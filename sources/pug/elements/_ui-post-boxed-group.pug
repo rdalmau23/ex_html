@@ -1,0 +1,10 @@
+mixin post-boxed(obj)
+  // Post boxed
+  article.post-boxed
+    figure.post-boxed__image
+      +jpg(obj.img)
+
+    .post-boxed__body
+      p.post-boxed__time=obj.time
+      p.post-boxed__title: a(href='#')=obj.title
+      a.link.link-arrow(href='#') Join up

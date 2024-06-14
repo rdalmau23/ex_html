@@ -1,0 +1,303 @@
+// Quotes custom
+// -----------------------------------
+
+// Quote primary
+.quote-primary {
+  .cite {
+    @include header-h6;
+    color: $headings-color;
+  }
+
+  .q {
+    color: $gray-darker;
+  }
+}
+
+.quote-primary__mark {
+  position: relative;
+  top: 6px;
+  display: block;
+  width: 37px;
+  height: 27px;
+  fill: $secondary;
+  @include flex-shrink(0);
+}
+
+.quote-primary__body {
+  position: relative;
+  padding: 25px 0;
+  border-top: 1px solid #eaeced;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 13px;
+    border-style: solid;
+    border-color: #eaeced;
+  }
+
+  &:before {
+    left: 0;
+    width: 78px;
+    border-width: 1px 1px 0 0;
+  }
+
+  &:after {
+    right: 0;
+    width: calc(100% - 90px);
+    border-width: 1px 0 0 1px;
+    transform-origin: 0 0;
+    transform: skew(-45deg);
+  }
+}
+
+.quote-primary__text {
+  padding-top: 20px;
+}
+
+.quote-primary__footer {
+  padding-left: 5px;
+}
+
+* + .quote-primary__footer {
+  margin-top: 8px;
+}
+
+@media (min-width: $screen-xs-min) {
+  .quote-primary__body {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    padding: 27px 20px 27px 35px;
+  }
+
+  .quote-primary__text {
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .quote-primary__footer {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .quote-primary__body {
+    padding-right: 60px;
+  }
+}
+
+// Quote classic
+.quote-classic {
+  position: relative;
+  padding-left: 60px;
+  width: 100%;
+  min-height: 70px;
+  max-width: 705px;
+  text-align: left;
+}
+
+.quote-classic__mark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+
+  svg {
+    max-height: 40px;
+    max-width: 40px;
+    width: auto;
+    fill: #efefef;
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+  .quote-classic {
+    padding-left: 75px;
+  }
+
+  .quote-classic__mark {
+    svg {
+      max-height: 57px;
+      max-width: 57px;
+    }
+  }
+}
+
+// Quote modern
+.quote-modern {
+  position: relative;
+  overflow: hidden;
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(nowrap);
+  @include align-items(stretch);
+  @include justify-content(center);
+  width: 100%;
+  background: $gray-lighter;
+  text-align: left;
+
+  .q {
+    letter-spacing: .05em;
+  }
+
+  .cite {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $secondary;
+  }
+
+  * + .q {
+    margin-top: 10px;
+  }
+
+  * + .cite {
+    margin-top: 10px;
+  }
+}
+
+.quote-modern__image {
+  width: 55px;
+  @include flex-shrink(0);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.quote-modern__main {
+  position: relative;
+  z-index: 3;
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include flex-grow(1);
+  padding-left: 15px;
+}
+
+.ie-10,
+.ie-11 {
+  .quote-modern__main {
+    width: 100%;
+  }
+}
+
+.quote-modern__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0;
+  color: $gray-darker;
+}
+
+@media (min-width: $screen-xs-min) {
+  .quote-modern__main {
+    padding: 24px 30px 20px 30px;
+  }
+
+  .quote-modern__image {
+    position: relative;
+    overflow: hidden;
+    width: 130px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
+      min-height: 101%;
+      min-width: 101%;
+      max-width: round(130px * 1.5);
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .quote-modern__title {
+    font-size: 18px;
+  }
+
+  .quote-modern__main {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      background: $gray-lighter;
+    }
+
+    &:before {
+      transform-origin: 50% 50%;
+      transform: skew(-13deg);
+    }
+
+    &:after {
+      transform-origin: 50% 50%;
+      transform: skew(13deg);
+    }
+  }
+}
+
+// Quote modern group
+.quote-modern-group {
+  .quote-modern + .quote-modern {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: $screen-xs-min) {
+
+}
+
+@media (min-width: $screen-sm-min) {
+  .quote-modern-group {
+    position: relative;
+    background: #e4e5e8;
+    padding: 30px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -25px;
+      border-width: 0 0 25px 50px;
+      border-color: transparent transparent #e4e5e8 transparent;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .quote-modern-group {
+    margin-left: 20px;
+    &:after {
+      top: 50%;
+      transform: translateY(-50%);
+      left: -25px;
+      border-width: 0 0 50px 25px;
+      border-color: transparent transparent #e4e5e8 transparent;
+    }
+  }
+}
+
+@media (min-width: $screen-xl-min) {
+  .quote-modern-group {
+    padding: 54px;
+    margin-left: 25px;
+
+    .quote-modern + .quote-modern {
+      margin-top: 53px;
+    }
+  }
+}
