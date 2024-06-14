@@ -20,11 +20,9 @@ header {
 }
 #logo{
   width: 50px;
-  margin-bottom: -20px;
 }
 header input {
   flex: 1;
-  margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ddd;
   width: 490px;
@@ -44,7 +42,8 @@ header nav ul li a {
 }
 main {
   padding: 20px;
-  width: 100%;
+  width: 80%;
+  margin-right: 20px;
 }
 section {
   background-color: white;
@@ -98,7 +97,7 @@ section .show-more {
 }
 #aside {
   margin: 20px;
-  width: 40%;
+  width: 20%;
 }
 #aside section {
   background-color: white;
@@ -136,11 +135,8 @@ footer {
   text-align: center;
 }
 article{
-  display: grid;
-  grid-template-columns: 2fr 2fr;
+  display: flex;
   width: 100%;
-  justify-content: end;
-  justify-items: end;
 }
 .persons{
   width: 30px;
@@ -173,9 +169,9 @@ body section button {
   
 }
 .welcome{
-  margin-top: 20px;
+  margin: 20px;
   height: 20px;
-  width: 100%;
+  width: 97.3%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,16 +182,81 @@ body section button {
   justify-content: center;
 }
 #buscar{
-  margin-bottom: -15px;
   border: #ddd 1px solid;
   height: 35px;
+}
+nav{
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
 nav li{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50px;
 }
 nav li:hover{
   background-color: #00000013;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.logo p{
+  margin-left: 10px;
+}
+
+.tweet-container {
+  height: 265px;
+  margin-top: 30px;
+  padding: 10px 30px;
+  background-color: white;
+  border: solid 0.1px rgba(128, 128, 128, 0.217);
+  overflow: hidden;
+}
+
+.tweet-head {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tweet-profile {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.tweet-icon {
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.tweet-title {
+  color: black;
+  font-size: 1.4rem;
+}
+
+.tweet-content {
+  overflow-y: scroll;
+  height: 200px;
+}
+
+.tweet-items {
+  border-top: solid 0.1px rgba(128, 128, 128, 0.217);
+  padding: 5px 2px 0;
+  position: relative;
+}
+
+.tweet-text {
+  margin-top: 0;
 }

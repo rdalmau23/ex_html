@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Hunt Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
             <img src="./images/logo.png" alt="logo" id="logo">
             <img src="./images/search.png" alt="logo" id="buscar">
-            <input type="text" placeholder="Discover your next favorite thing...">      
-        </div>   
+            <input type="text" placeholder="Discover your next favorite thing...">
+            <p style="color: rgb(147, 147, 147);">···</p>
+            <p style="color: rgb(147, 147, 147);">Login</p>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -25,105 +29,158 @@
                 <li><a href="#">iMessage Apps</a></li>
                 <li><a href="#">iPhone</a></li>
                 <li><a href="#">Photography Tools</a></li>
-                
             </ul>
         </nav>
     </header>
     <section class="welcome">
-            <h4><strong>Welcome to Product Hunt</strong> get the best new products in your inbox</h4>
-            <input type="text" placeholder="Your email" id="sub"> 
-            <button>Subscribe</button>
+        <h4><strong>Welcome to Product Hunt</strong> get the best new products in your inbox</h4>
+        <input type="text" placeholder="Your email" id="sub">
+        <button>Subscribe</button>
     </section>
     <article>
-    <main>
-        <section class="popular-this-week">
-            <h2>Popular this week</h2>
-            <div class="product">
-                <div class="product-details">
-                    <img src="./images/popular-this-week/app-1.png" alt="Duolingo Bots">
-                    <div>
-                        <h3>Duolingo Bots</h3>
-                        <p>AI-powered characters to teach language conversation</p>
+        <main>
+            <section class="popular-this-week">
+                <h2>Popular this week</h2>
+                <div class="product">
+                    <div class="product-details">
+                        <img src="./images/popular-this-week/app-1.png" alt="Duolingo Bots">
+                        <div>
+                            <h3>Duolingo Bots</h3>
+                            <p>AI-powered characters to teach language conversation</p>
+                        </div>
                     </div>
+                    <div class="votes">1460 ▲</div>
                 </div>
-                <div class="votes">1460 ▲</div>
+                <div class="product">
+                    <div class="product-details">
+                        <img src="./images/popular-this-week/app-2.png" alt="Tribe 2.0">
+                        <div>
+                            <h3>Tribe 2.0</h3>
+                            <p>Introducing Augmented Messaging™</p>
+                        </div>
+                    </div>
+                    <div class="votes">1465 ▲</div>
+                </div>
+                <div class="product">
+                    <div class="product-details">
+                        <img src="./images/popular-this-week/app-3.png" alt="Workplace by Facebook">
+                        <div>
+                            <h3>Workplace by Facebook</h3>
+                            <p>Connect everyone in your company and turn ideas into action</p>
+                        </div>
+                    </div>
+                    <div class="votes">1003 ▲</div>
+                </div>
+                <button class="show-more">Show more</button>
+            </section>
+            <section class="today">
+                <h2>Today</h2>
+                <div class="product">
+                    <div class="product-details">
+                        <img src="./images/today/app-1.png" alt="Sprayscape">
+                        <div>
+                            <h3>Sprayscape</h3>
+                            <p>A perfectly imperfect VR-ish camera experiment, by Google</p>
+                        </div>
+                    </div>
+                    <div class="votes">82 ▲</div>
+                </div>
+                <div class="product">
+                    <div class="product-details">
+                        <img src="./images/today/app-2.png" alt="Ask Gary Vee">
+                        <div>
+                            <h3>Ask Gary Vee</h3>
+                            <p>The unofficial Gary Vee persona chatbot on Messenger!</p>
+                        </div>
+                    </div>
+                    <div class="votes">21 ▲</div>
+                </div>
+                <div class="product">
+                    <div class="product-details">
+                        <img src="./images/today/app-3.png" alt="The Electron Wheel">
+                        <div>
+                            <h3>The Electron Wheel</h3>
+                            <p>Turn your standard bicycle into an electric bike.</p>
+                        </div>
+                    </div>
+                    <div class="votes">23 ▲</div>
+                </div>
+            </section>
+        </main>
+        <div id="aside">
+            <section class="kittybot">
+                <h3>Kittybot for Slack</h3>
+                <p>A friendly feline that sends you cool new things.</p>
+                <button>Add Kittybot to Slack</button>
+            </section>
+            <section class="live-chats">
+                <h3>Upcoming Live Chats</h3>
+                <ul>
+                    <img src="./images/today/app-2.png" alt="fotico" class="persons">
+                    <li><a href="#"><strong>Adam Besvinick</strong> <br>VC at Deep Fork Capital</a></li>
+                    <img src="./images/today/app-2.png" alt="fotico" class="persons">
+                    <li><a href="#"><strong>Susan David</strong> <br>Author of Emotionally Guilty</a></li>
+                    <img src="./images/today/app-2.png" alt="fotico" class="persons">
+                    <li><a href="#"><strong>Avid Larizadeh Duggan</strong> <br>General Partner at GV</a></li>
+                    <img src="./images/today/app-2.png" alt="fotico" class="persons">
+                    <li><a href="#"><strong>Katerina Markov Schneider</strong> <br>Founder and CEO of Ritual</a></li>
+                    <img src="./images/today/app-2.png" alt="fotico" class="persons">
+                    <li><a href="#"><strong>Jocelyn Glei</strong> <br>Master of Productivity, founder and author...</a>
+                    </li>
+                </ul>
+            </section>
+            <div class="tweet-container">
+                <p>
+                    <span class="tweet-title">Tweets</span> liked by <br><a
+                        style="text-decoration: underline; color: rgb(0, 145, 255);" href="">@ProductHunt</a>
+                </p>
+                <div class="tweet-content">
+                    <div class="tweet-items">
+                        <img class="tweet-profile" src="./images/images.png" alt="Err">
+                        <p class="tweet-head">
+                            <span class="tweet-name">Taylor Swift</span><br>
+                            <a href="" class="tweet-user"
+                                style="text-decoration: underline; color: rgb(0, 145, 255);">@TaylirSft</a>
+                        </p>
+                        <img class="tweet-icon" src="./images/twitter-icon.png" alt="Err">
+                        <p class="tweet-text">It's crazy how this people stayed in the night without going to the toylet
+                            juju</p>
+                    </div>
+
+                    <div class="tweet-items">
+                        <img class="tweet-profile" src="./images/images.png" alt="Err">
+                        <p class="tweet-head">
+                            <span class="tweet-name">Barack Obama</span><br>
+                            <a href="" class="tweet-user"
+                                style="text-decoration: underline; color: rgb(0, 145, 255);">@obm</a>
+                        </p>
+                        <img class="tweet-icon" src="./images/twitter-icon.png" alt="Err">
+                        <p class="tweet-text">Don't even know what is this Biden doing in the ceremony. The man was
+                            totaly paralyzed. Usa is going throught a very very dark days..</p>
+                    </div>
+
+                    <div class="tweet-items">
+                        <img class="tweet-profile" src="./images/images.png" alt="Err">
+                        <p class="tweet-head">
+                            <span class="tweet-name">Justin Bieber</span><br>
+                            <a href="" class="tweet-user"
+                                style="text-decoration: underline; color: rgb(0, 145, 255);">@Jastin</a>
+                        </p>
+                        <img class="tweet-icon" src="./images/twitter-icon.png" alt="Err">
+                        <p class="tweet-text">Baby, baby, baby uuuh. Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+
+                </div>
             </div>
-            <div class="product">
-                <div class="product-details">
-                    <img src="./images/popular-this-week/app-2.png" alt="Tribe 2.0">
-                    <div>
-                        <h3>Tribe 2.0</h3>
-                        <p>Introducing Augmented Messaging™</p>
-                    </div>
-                </div>
-                <div class="votes">1465 ▲</div>
-            </div>
-            <div class="product">
-                <div class="product-details">
-                    <img src="./images/popular-this-week/app-3.png" alt="Workplace by Facebook">
-                    <div>
-                        <h3>Workplace by Facebook</h3>
-                        <p>Connect everyone in your company and turn ideas into action</p>
-                    </div>
-                </div>
-                <div class="votes">1003 ▲</div>
-            </div>
-            <button class="show-more">Show more</button>
-        </section> 
-        <section class="today">
-            <h2>Today</h2>
-            <div class="product">
-                <div class="product-details">
-                    <img src="./images/today/app-1.png" alt="Sprayscape">
-                    <div>
-                        <h3>Sprayscape</h3>
-                        <p>A perfectly imperfect VR-ish camera experiment, by Google</p>
-                    </div>
-                </div>
-                <div class="votes">82 ▲</div>
-            </div>
-            <div class="product">
-                <div class="product-details">
-                    <img src="./images/today/app-2.png" alt="Ask Gary Vee">
-                    <div>
-                        <h3>Ask Gary Vee</h3>
-                        <p>The unofficial Gary Vee persona chatbot on Messenger!</p>
-                    </div>
-                </div>
-                <div class="votes">21 ▲</div>
-            </div>
-            <div class="product">
-                <div class="product-details">
-                    <img src="./images/today/app-3.png" alt="The Electron Wheel">
-                    <div>
-                        <h3>The Electron Wheel</h3>
-                        <p>Turn your standard bicycle into an electric bike.</p>
-                    </div>
-                </div>
-                <div class="votes">23 ▲</div>
-            </div>           
-        </section>
-    </main>
-    <div id="aside">
-        <section class="kittybot">
-            <h3>Kittybot for Slack</h3>
-            <p>A friendly feline that sends you cool new things.</p>
-            <button>Add Kittybot to Slack</button>
-        </section>
-        <section class="live-chats">
-            <h3>Upcoming Live Chats</h3>
-            <ul>
-                <img src="./images/today/app-2.png" alt="fotico" class="persons"><li><a href="#"><strong>Adam Besvinick</strong> <br>VC at Deep Fork Capital</a></li>
-                <img src="./images/today/app-2.png" alt="fotico" class="persons"><li><a href="#"><strong>Susan David</strong> <br>Author of Emotionally Guilty</a></li>
-                <img src="./images/today/app-2.png" alt="fotico" class="persons"><li><a href="#"><strong>Avid Larizadeh Duggan</strong> <br>General Partner at GV</a></li>
-                <img src="./images/today/app-2.png" alt="fotico" class="persons"><li><a href="#"><strong>Katerina Markov Schneider</strong> <br>Founder and CEO of Ritual</a></li>
-                <img src="./images/today/app-2.png" alt="fotico" class="persons"><li><a href="#"><strong>Jocelyn Glei</strong> <br>Master of Productivity, founder and author...</a></li>
-            </ul>
-        </section>
-    </div>
-</article>
+        </div>
+    </article>
+
+
+
     <footer>
         <p>&copy; 2024 Product Hunt Clone</p>
     </footer>
 </body>
+
 </html>
