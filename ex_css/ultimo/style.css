@@ -5,6 +5,7 @@ body {
   display: grid;
   align-items: center;
   background-color: #f5f5f5;
+  width: 100%;
 }
 header {
   width: 100%;
@@ -20,7 +21,6 @@ header {
 #logo{
   width: 50px;
   margin-bottom: -20px;
-  
 }
 header input {
   flex: 1;
@@ -51,7 +51,7 @@ section {
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  width: 80%;
+  width: 100%;
 }
 section .popular-this-week{
   display: flex;
@@ -96,17 +96,17 @@ section .show-more {
   cursor: pointer;
   padding: 10px 0;
 }
-aside {
+#aside {
   margin: 20px;
   width: 40%;
 }
-aside section {
+#aside section {
   background-color: white;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
-aside section button {
+#aside section button {
   background-color: #da552f;
   color: white;
   border: none;
@@ -114,16 +114,16 @@ aside section button {
   cursor: pointer;
   border-radius: 5px;
 }
-aside .live-chats ul {
+#aside .live-chats ul {
   list-style: none;
   padding: 0;
 }
-aside .live-chats ul li {
+#aside .live-chats ul li {
   margin: 10px 0;
   align-items: center;
   
 }
-aside .live-chats ul li a {
+#aside .live-chats ul li a {
   text-decoration: none;
   color: #555;
 }
@@ -138,7 +138,9 @@ footer {
 article{
   display: grid;
   grid-template-columns: 2fr 2fr;
-  width: 1000px;
+  width: 100%;
+  justify-content: end;
+  justify-items: end;
 }
 .persons{
   width: 30px;
