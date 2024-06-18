@@ -151,10 +151,54 @@ for(let frase = 0; frase < 10; frase++){
     console.log('I <3 code')
 };
 
-const array = ['a', 'b', 'c', 'd', 'e'];
+// const array = ['a', 'b', 'c', 'd', 'e'];
 
-    array.forEach(item => {console.log(item)});
+//     array.forEach(item => {console.log(item)});
 
-for(let num4 = 5; num4 > 0; num4--){
+for(let num4 = 5; num4 >= 0; num4--){
     console.log(num4)
 };
+
+const dinner = []; 
+//Output: []
+//Expected output: ['🍔', '🌭']
+
+dinner.push('🍔');
+dinner.push('🌭');
+
+console.log(dinner);
+
+dinner.push('🍟', '🍟');
+
+console.log(dinner);
+
+dinner[dinner.length] = '🧋';
+dinner[dinner.length] = '🧋';
+
+console.log(dinner);
+
+dinner.reverse();
+console.log(dinner);
+
+const dinnerGirado = [];
+    for(let i = dinner.length; i >= 0;i--){
+        dinnerGirado.push(dinner[i]);
+    };
+    console.log(dinner);
+
+const ticket01 = ['🍺', '🍺', '🥜']; 
+//👨🏻‍🦰 Output: ['🍺', '🍺', '🥜']
+const ticket02 = ['🍺', '🥪', '🥙']; 
+//👱🏽‍♂️ Output: ['🍺', '🥪', '🥙']
+    
+
+//Output: []
+//Expected output ['🍺', '🍺', '🍺', '🥜', '🍺', '🥪', '🥙']
+
+const combinedTicket = ticket01.concat(ticket02);
+console.log(combinedTicket);
+
+
+// ejercicios arrays PDF
+
+exercici1 = ['🥜', '🍺', '🥪', '🥙'];
