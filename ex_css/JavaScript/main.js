@@ -208,13 +208,16 @@ exercici2 = ['🥜', '🍺', '🥪', '🥙'];
 console.log(exercici2.includes('🥪'));
 
 exercici3 = ['🥜', '🍺', '🥪', '🥙'];
-console.log(exercici3.pop(-1));
+exercici3.pop(-2);
+console.log(exercici3);
 
 exercici4 = ['🥜', '🥜', '🥪', '🥙'];
 console.log(exercici4.pop(-1));
 
 
-
+const ticket = ['🍺', '🍺', '🍺', '🥜', '🍺', '🥪', '🥙'];
+ticket.pop();
+console.log(ticket);
 
 
 
