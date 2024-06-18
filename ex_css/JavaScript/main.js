@@ -202,3 +202,19 @@ console.log(combinedTicket);
 // ejercicios arrays PDF
 
 exercici1 = ['🥜', '🍺', '🥪', '🥙'];
+console.log(exercici1.fill('🍺'));
+
+exercici2 = ['🥜', '🍺', '🥪', '🥙'];
+console.log(exercici2.includes('🥪'));
+
+exercici3 = ['🥜', '🍺', '🥪', '🥙'];
+console.log(exercici3.pop(-1));
+
+exercici4 = ['🥜', '🥜', '🥪', '🥙'];
+console.log(exercici4.pop(-1));
+
+
+
+
+
+
