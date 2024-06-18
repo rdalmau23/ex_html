@@ -78,3 +78,83 @@ function comparaNum(num1 = 3, num2 = 3){
     }
 }
 comparaNum();
+
+
+const mes = 2;
+switch (mes){
+    case 1:
+        console.log('Gener');
+        break;
+        
+    case 2:
+        console.log('Febrer');
+        break;
+    case 3:
+        console.log('Març');
+        break;
+        
+    case 4:
+        console.log('Abril');
+        break;
+    case 5:
+        console.log('Maig');
+        break;
+            
+    case 6:
+        console.log('Juny');
+        break;
+    case 7:
+        console.log('Juliol');
+        break;
+    case 8:
+        console.log('Agost');
+        break;
+    case 9:
+        console.log('Setembre');
+        break;
+    case 10:
+        console.log('Octubre');
+        break;
+    case 11:
+        console.log('Novembre');
+        break;
+    case 12:
+        console.log('Desembre');
+        break;
+    default:
+        console.log('?????');
+        break;
+
+};
+
+console.log(Math.round(Math.random()));
+
+console.log(Math.round(Math.PI));
+
+
+
+let palabra = 'Escuela';
+
+console.log(palabra.replace('a', 'o'));
+
+
+let palabra2 = 'Academia';
+
+console.log(palabra2.startsWith('Aca'));
+console.log(palabra.startsWith('Aca'));
+
+let palabra3 = 'Hola ';
+
+console.log(palabra3.repeat(3));
+
+for(let frase = 0; frase < 10; frase++){
+    console.log('I <3 code')
+};
+
+const array = ['a', 'b', 'c', 'd', 'e'];
+
+    array.forEach(item => {console.log(item)});
+
+for(let num4 = 5; num4 > 0; num4--){
+    console.log(num4)
+};
