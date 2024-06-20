@@ -221,3 +221,7 @@ console.log(ticket);
 
 
 
+// $().ready( () =>{
+//     alert('sfeiuoh');
+    
+// });
