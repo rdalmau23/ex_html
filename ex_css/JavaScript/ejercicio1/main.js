@@ -1,5 +1,5 @@
 let array = [];
-const emoticons = ["🌶️", "🛵", "🎴", "🍋", "🍄", "🃏", "🍕", "🥊", "🏆", "🎃", "🍓", "🏍️", "🛵", "🛹", "🍺", "✂️"];
+const emoticons = ["🌶️", "💈", "🎴", "🍋", "🍄", "🃏", "🍕", "🥊", "🏆", "🎃", "🍓", "🏍️", "🛵", "🛹", "🍺", "✂️"];
 
 function updateDisplay() {
     document.getElementById("arrayDisplay").innerText = JSON.stringify(array);
