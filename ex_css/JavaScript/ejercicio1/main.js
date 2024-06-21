@@ -1,47 +1,44 @@
 let array = [];
-const emoticons = ["🌶️", "💈", "🎴", "🍋", "🍄", "🃏", "🍕", "🥊", "🏆", "🎃", "🍓", "🏍️", "🛵", "🛹", "🍺", "✂️"];
+const emoticonos = ["🌶️", "💈", "🎴", "🍋", "🍄", "🃏", "🍕", "🥊", "🏆", "🎃", "🍓", "🏍️", "🛵", "🛹", "🍺", "✂️"];
 
 function updateDisplay() {
-    document.getElementById("arrayDisplay").innerText = JSON.stringify(array);
+    document.getElementById("mostrarArray").innerHTML = JSON.stringify(array);
 }
 
 function randomEmoji() {
-    const randomIndex = Math.floor(Math.random() * emoticons.length);
-    return emoticons[randomIndex];
+    const random = Math.floor(Math.random() * emoticonos.length);
+    return emoticonos[random];
 }
 
-function pushItem() {
+function push() {
     array.push(randomEmoji());
     updateDisplay();
 }
 
-function unshiftItem() {
+function unshift() {
     array.unshift(randomEmoji());
     updateDisplay();
 }
 
-function insertItem() {
-    const index = parseInt(document.getElementById("insertIndex").value);
+function insert() {
+    const index = parseInt(document.getElementById("insert").value);
         array.splice(index, 0, randomEmoji());
         updateDisplay();
 }
 
-function popItem() {
-    if (array.length > 0) {
+function pop() {
         array.pop();
         updateDisplay();
-    } 
 }
 
-function shiftItem() {
-    if (array.length > 0) {
+function shift() {
         array.shift();
         updateDisplay();
-    } 
+    
 }
 
-function removeItem() {
-    const index = parseInt(document.getElementById("removeIndex").value);
+function remove() {
+    const index = parseInt(document.getElementById("remove").value);
         array.splice(index, 1);
         updateDisplay();
 }
