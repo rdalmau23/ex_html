@@ -64,23 +64,23 @@ const images = [
     'ad.gif',
     'as.gif',
     'b.gif'
-  ];
-  
+];
 
-  function getRandomImage() {
+
+function getRandomImage() {
     const randomIndex = Math.floor(Math.random() * images.length);
     return images[randomIndex];
-  }
-  
+}
+
 function updateRandomImage() {
     const randomImage = getRandomImage();
     const imgElement = document.getElementById('randomImage');
     imgElement.src = `img/${randomImage}`;
-  }
-  
-    document.addEventListener('DOMContentLoaded', () => {
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     const imgElement = document.getElementById('randomImage');
     imgElement.addEventListener('click', updateRandomImage);
 
     updateRandomImage();
-  });
+});
