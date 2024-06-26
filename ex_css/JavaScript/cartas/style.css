@@ -11,4 +11,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(129, 129, 129);
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+body{
+    margin: 0;
 }
