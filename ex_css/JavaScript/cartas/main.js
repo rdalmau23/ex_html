@@ -63,9 +63,7 @@ const images = [
     'ah.gif',
     'ad.gif',
     'as.gif',
-    'b.gif',
-
-    'card.back.png'
+    'b.gif'
   ];
   
 
