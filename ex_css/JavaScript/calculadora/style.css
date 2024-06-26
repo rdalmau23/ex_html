@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.valor{
+    height: 800px;
+}
+.boton.numero{
+    background-color: rgb(66, 66, 66);
+}
+.boton.decimal{
+    background-color: rgb(66, 66, 66);
+}
+.boton{
+    height: 90px;
+    width: 90px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+    margin: 6px;
+    color: white;
+}
+.boton.operador{
+    background-color: orange;
+}
+.boton.numero.cero{
+    width: 195px;
+}
+.boton.funcion{
+    color: black;
+    background-color: rgb(180, 180, 180);
+}
+.valor{
+    color: white;
+}
