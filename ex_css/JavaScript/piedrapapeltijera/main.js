@@ -1,5 +1,5 @@
 function jugar() {
-    let opciones = ['🪨', '📋', '✂️'];
+    const opciones = ['🪨', '📋', '✂️'];
     
     let usuario1 = window.prompt("Turno Usuario 1:");
     let usuario2 = window.prompt("Turno Usuario 2:");

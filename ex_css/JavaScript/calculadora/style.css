@@ -12,6 +12,7 @@ main{
 }
 .valor{
     height: 800px;
+    font-size:xx-large;
 }
 .boton.numero{
     background-color: rgb(66, 66, 66);

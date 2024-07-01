@@ -1,16 +1,16 @@
 const valueEl = document.querySelector(".valor");
 
-const acEl = document.querySelector(".ac");
-const pmEl = document.querySelector(".mm");
-const percentEl = document.querySelector(".porcentaje");
+const ac = document.querySelector(".ac");
+const mm = document.querySelector(".mm");
+const porcentaje = document.querySelector(".porcentaje");
 
-const additionEl = document.querySelector(".suma");
-const subtractionEl = document.querySelector(".resta");
-const multiplicationEl = document.querySelector(".multiplicacion");
-const divisionEl = document.querySelector(".division");
-const equalEl = document.querySelector(".igual");
+const suma = document.querySelector(".suma");
+const resta = document.querySelector(".resta");
+const multiplicacion = document.querySelector(".multiplicacion");
+const division = document.querySelector(".division");
+const igual = document.querySelector(".igual");
 
-const decimalEl = document.querySelector(".decimal");
+const decimal = document.querySelector(".decimal");
 const number0El = document.querySelector(".cero");
 const number1El = document.querySelector(".uno");
 const number2El = document.querySelector(".dos");
@@ -34,11 +34,9 @@ const numberElArray = [
   number9El,
 ];
 
-// variables
 let valueStrInMemory = null;
 let operatorInMemory = null;
 
-// Functions
 const getValueAsStr = () => valueEl.textContent.split(",").join("");
 
 const getValueAsNum = () => {
@@ -101,12 +99,12 @@ const handleOperatorClick = (operation) => {
 };
 
 // Add Event Listeners to functions
-acEl.addEventListener("click", () => {
+ac.addEventListener("click", () => {
   setStrAsValue("0");
   valueStrInMemory = null;
   operatorInMemory = null;
 });
-pmEl.addEventListener("click", () => {
+mm.addEventListener("click", () => {
   const currentValueNum = getValueAsNum();
   const currentValueStr = getValueAsStr();
 
@@ -120,7 +118,7 @@ pmEl.addEventListener("click", () => {
     setStrAsValue(currentValueStr.substring(1));
   }
 });
-percentEl.addEventListener("click", () => {
+porcentaje.addEventListener("click", () => {
   const currentValueNum = getValueAsNum();
   const newValueNum = currentValueNum / 100;
   setStrAsValue(newValueNum.toString());
@@ -128,20 +126,19 @@ percentEl.addEventListener("click", () => {
   operatorInMemory = null;
 });
 
-// add event listeners to operators
-additionEl.addEventListener("click", () => {
+suma.addEventListener("click", () => {
     handleOperatorClick("suma");
 });
-subtractionEl.addEventListener("click", () => {
+resta.addEventListener("click", () => {
     handleOperatorClick("resta");
 });
-multiplicationEl.addEventListener("click", () => {
+multiplicacion.addEventListener("click", () => {
     handleOperatorClick("multiplicacion");
 });
-divisionEl.addEventListener("click", () => {
+division.addEventListener("click", () => {
     handleOperatorClick("division");
 });
-equalEl.addEventListener("click", () => {
+igual.addEventListener("click", () => {
   if (valueStrInMemory) {
     setStrAsValue(getResultOfOperationAsStr());
     valueStrInMemory = null;
@@ -149,14 +146,13 @@ equalEl.addEventListener("click", () => {
   }
 });
 
-// Add Event Listeners to numbers and decimal
 for (let i = 0; i < numberElArray.length; i++) {
   const numberEl = numberElArray[i];
   numberEl.addEventListener("click", () => {
     handleNumberClick(i.toString());
   });
 }
-decimalEl.addEventListener("click", () => {
+decimal.addEventListener("click", () => {
   const currentValueStr = getValueAsStr();
   if (!currentValueStr.includes(".")) {
     setStrAsValue(currentValueStr + ".");
