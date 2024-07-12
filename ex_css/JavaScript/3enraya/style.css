@@ -1,0 +1,112 @@
+body{
+    background-color: rgba(0, 0, 0, 0.888);
+    margin: 0;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 42, 42);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 0;
+}  
+.celdas { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 50px;
+} 
+.row { 
+    display: flex; 
+} 
+.celda { 
+    border: none; 
+    width: 80px; 
+    height: 80px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 24px; 
+    text-align: center; 
+    cursor: pointer; 
+    background-color: rgb(189, 189, 189);
+}   
+.celda:active { 
+    outline: none; 
+} 
+#b1{ 
+    border-bottom: 1px solid gray; 
+    border-right: 1px solid gray; 
+} 
+  
+#b2 { 
+    border-bottom: 1px solid gray; 
+    border-right: 1px solid gray; 
+    border-left: 1px solid gray; 
+} 
+  
+#b3 { 
+    border-bottom: 1px solid gray; 
+    border-left: 1px solid gray; 
+} 
+  
+#b4 { 
+    border-top: 1px solid gray; 
+    border-bottom: 1px solid gray; 
+    border-right: 1px solid gray; 
+} 
+      
+#b5 { 
+    border: 1px solid gray; 
+} 
+  
+#b6 { 
+    border-top: 1px solid gray; 
+    border-bottom: 1px solid gray; 
+    border-left: 1px solid gray; 
+} 
+  
+#b7 { 
+    border-top: 1px solid gray; 
+    border-right: 1px solid gray; 
+} 
+  
+#b8 { 
+    border-top: 1px solid gray; 
+    border-right: 1px solid gray; 
+    border-left: 1px solid gray; 
+} 
+  
+#b9 { 
+    border-top: 1px solid gray; 
+    border-left: 1px solid gray; 
+} 
+#button { 
+    box-sizing: border-box; 
+    width: 95px; 
+    height: 40px; 
+    border: 1px solid dodgerblue; 
+    margin-left: auto; 
+    border-radius: 8px; 
+    font-family: Verdana, 
+        Geneva, Tahoma, sans-serif; 
+  
+    background-color: whitesmoke; 
+    color: dodgerblue; 
+    font-size: 20px; 
+    cursor: pointer;
+    margin-top: 50px;
+} 
+  
+#resultado { 
+    font-family: Verdana, 
+        Geneva, Tahoma, sans-serif; 
+    color: dodgerblue; 
+    font-size: 20px; 
+} 
+  
+main { 
+    text-align: center; 
+} 
