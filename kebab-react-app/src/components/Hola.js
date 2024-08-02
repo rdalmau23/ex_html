@@ -1,12 +1,15 @@
-const React = require("react");
+import React from 'react';
 
-class Hola extends React.Component{
-    render(){
-        return React.createElement(
-            <div>Hola cocacola</div>
-            
-        )
-    }
+const Hola = ({nombre, edad, cm}) => {
+
+  return (
+    <div>
+      <h1>Nombre: {nombre}</h1>
+      <p>Edad: {edad}</p>
+      <p>Cm de pito: {cm}</p>
+      <hr/>
+    </div>
+  );
 }
 
 export default Hola;

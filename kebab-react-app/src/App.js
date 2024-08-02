@@ -1,12 +1,13 @@
-import Hola from "./components/Hola";
-
+import React from 'react';
+import  Hola  from './components/Hola';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>Dani sexy</h1>
-      <img src="https://cdn.worldvectorlogo.com/logos/dd.svg" alt="ddlogo" />
-      <Hola />
+      <Hola nombre="Rafel" edad={23} cm={2} />
+      <Hola nombre="Dani" edad={9} cm={3} />
+      <Hola nombre="Cris" edad={98} cm={6} />
     </div>
   );
 }
